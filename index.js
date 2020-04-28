@@ -50,8 +50,9 @@ function updateStyle(){
     scaleY(verticals[4], 0.25)
     scaleY(verticals[5], 6)
 
-
-    scaleBoth(boths[0], 0.3, 0.3)
+    scaleBoth(boths[0], 0.1, 0.4)
+    scaleBoth(boths[1], 0.3, 0.3)
+    scaleBoth(boths[2], -0.05, -0.05)
 
 
     
