@@ -1,8 +1,8 @@
 var total;
 var relativePos;
-var shift = document.getElementsByClassName("shift")[0]
-var bottom = document.getElementsByClassName("bottom")[0]
-console.log(shift)
+var horizontals = document.getElementsByClassName("horizontal")
+var verticals = document.getElementsByClassName("vertical")
+var boths = document.getElementsByClassName("both")
 
 document.addEventListener('DOMContentLoaded', function(){
     console.log("loaded")
@@ -31,14 +31,24 @@ function calcChange(d){
     //calculate degree of translation
     // have a constant multiplyer d as param
     //from 1 to 10. 10 means shift 3 blocks at max
-    result = d * relativePos * 10
+    result = d * relativePos * 3
     return result
 }
 
 function updateStyle(){
-    scaleX(shift, 5)//what elem on what rate
-    scaleY(bottom,3)
-    //shift.style.transform = "scaleX("+calcChange(5)+")";
+    
+    scaleX(horizontals[0], 5) //what elem, what rate
+    scaleX(horizontals[1], 2)
+    scaleX(horizontals[2], 9)
+    
+    scaleY(verticals[0], 2) //what elem, what rate
+    scaleY(verticals[1], 4)
+    scaleY(verticals[2], 7)
+
+    scaleBoth(boths[0], 0.7, 0.7)
+
+
+    
 
 }
 
@@ -49,4 +59,10 @@ function scaleX(target, d){
 
 function scaleY(target, d){
     target.style.transform = "scaleY("+calcChange(d)+")";
+}
+
+function scaleBoth(target, dx, dy){
+    target.style.transform = "scaleX("+calcChange(dx)+")";
+    target.style.transform = target.style.transform + "scaleY("+calcChange(dy)+")";
+
 }
