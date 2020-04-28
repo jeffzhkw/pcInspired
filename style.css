@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-    transition: 0.7s;
+    transition: 0.1s;
 }
 
 html, body{
@@ -20,16 +20,16 @@ html, body{
     grid-template-rows: repeat(12, 1fr);
     /* gap: 1px 1px; */
     position: fixed;
-    background-color: black;
+    background-color: #F9F4E7;
     height: 96vmin;
     width: 96vmin;
     margin: 2vmin;
 }
 
 .main div{
-    border:1px solid white;
-}
-
-.shift{
-    
+    background-color:#21262C;
+    margin: 1px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid white;
 }
