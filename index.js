@@ -31,21 +31,27 @@ function calcChange(d){
     //calculate degree of translation
     // have a constant multiplyer d as param
     //from 1 to 10. 10 means shift 3 blocks at max
-    result = d * relativePos * 3
+    result = d * relativePos * 3 + 1
     return result
 }
 
 function updateStyle(){
     
-    scaleX(horizontals[0], 5) //what elem, what rate
-    scaleX(horizontals[1], 2)
-    scaleX(horizontals[2], 9)
-    
-    scaleY(verticals[0], 2) //what elem, what rate
-    scaleY(verticals[1], 4)
-    scaleY(verticals[2], 7)
+    scaleX(horizontals[0], 4) //what elem, what rate
+    scaleX(horizontals[1], 1)
+    scaleX(horizontals[2], 0.3)
+    scaleX(horizontals[3], 0.8)
+    scaleX(horizontals[4], 8)
 
-    scaleBoth(boths[0], 0.7, 0.7)
+    scaleY(verticals[0], 0.35)
+    scaleY(verticals[1], 1.1)
+    scaleY(verticals[2], 0.8) //what elem, what rate
+    scaleY(verticals[3], 3)
+    scaleY(verticals[4], 0.25)
+    scaleY(verticals[5], 6)
+
+
+    scaleBoth(boths[0], 0.3, 0.3)
 
 
     
